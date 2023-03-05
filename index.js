@@ -47,6 +47,13 @@ const appMenu = () => {
                 message: "What is the team manager's office number?"
             }
 
-        ])
+        ]).then(answers => {
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+            teamMembers.push(manager);
+            idList.push(answers.managerId);
+        })
     }
+    createManager();
 }
+
+appMenu();
