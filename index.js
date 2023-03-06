@@ -18,6 +18,10 @@ const teamMembers = []
 const appMenu = () => {
 
     function buildTeam() {
+        if(!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR)
+        }
+        fs.writeFileSync(outputPath, render(teamMembers), 'utf-8');
 
     }
 
@@ -48,7 +52,6 @@ const appMenu = () => {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             idList.push(answers.internId);
-            console.log(intern);
             createTeam()
         })
     }
@@ -81,7 +84,6 @@ const appMenu = () => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
             idList.push(answers.engineerId);
-            console.log(engineer);
             createTeam()
         })
     }
@@ -146,7 +148,6 @@ const appMenu = () => {
 
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-            console.log(manager);
             teamMembers.push(manager);
             idList.push(answers.managerId);
             createTeam();
