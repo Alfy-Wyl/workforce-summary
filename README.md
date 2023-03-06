@@ -24,7 +24,8 @@
 
   ## Usage
 
-  Use Node version 16 and above
+  Use Node version 16 and above.
+  
   node index.js
 
   When a user starts the application, they're prompted to enter the team manager's:
