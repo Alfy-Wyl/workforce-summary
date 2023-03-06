@@ -22,7 +22,35 @@ const appMenu = () => {
     }
 
     function addIntern() {
-
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "Add intern name",
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: "Add intern id",
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "Add intern email",
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "Add intern school",
+            },
+            
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            teamMembers.push(intern);
+            idList.push(answers.internId);
+            console.log(intern);
+            createTeam()
+        })
     }
 
     // Function to generate prompts for engineer's profile
