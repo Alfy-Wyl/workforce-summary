@@ -55,7 +55,8 @@
     School
 
   When a user decides to finish building their team, they exit the application and the HTML is generated.
-  https://github.com/Alfy-Wyl/workforce-summary/blob/main/assets/team%20profile.png
+  <img width="1236" alt="team profile" src="https://user-images.githubusercontent.com/118228946/223185311-148d23ba-e267-4636-89fe-cd378665aab2.png">
+
 
   ## License
 
