@@ -56,6 +56,8 @@
     School
 
   When a user decides to finish building their team, they exit the application and the HTML is generated.
+  <img width="1242" alt="user input" src="https://user-images.githubusercontent.com/118228946/223186184-384bed6b-16b1-4800-a364-46bb98ffd8e7.png">
+
   <img width="1236" alt="team profile" src="https://user-images.githubusercontent.com/118228946/223185311-148d23ba-e267-4636-89fe-cd378665aab2.png">
 
 
